@@ -1,0 +1,18 @@
+.menu-item {
+  margin-bottom: 10px;
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s;
+  color: #ecf0f1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu-item:hover {
+  background-color: #34495e;
+}
+
+.menu-item.collapsed {
+  padding: 10px 10px;
+  text-align: center;
+}
