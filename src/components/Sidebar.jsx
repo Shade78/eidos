@@ -17,9 +17,24 @@ export default function Sidebar({ setActiveMenu }) {
     { label: "Архив", key: "archive" },
   ];
 
+  const userName = "Иван Иванов";
+  const userRole = "Преподаватель";
+  const userInitials = userName
+    .split(" ")
+    .map((name) => name[0])
+    .join("");
+
   return (
     <div className={`sidebar ${isCollapsed ? "collapsed" : ""}`}>
-      <button onClick={() => setIsCollapsed(!isCollapsed)}>Свернуть</button>
+      <div className="sidebar-header">
+        <h2>Сим Центр</h2>
+        <button
+          onClick={() => setIsCollapsed(!isCollapsed)}
+          className="toggle-btn"
+        >
+          <div className="toggle-icon">&lt;</div>
+        </button>
+      </div>
       <ul>
         {menuItems.map((item) => (
           <MenuItem
@@ -30,6 +45,13 @@ export default function Sidebar({ setActiveMenu }) {
           />
         ))}
       </ul>
+      <div className="sidebar-footer">
+        <div className="user-info">
+          <div className="user-avatar">{userInitials}</div>
+          <div className="user-name">{userName}</div>
+          <div className="user-Role">{userRole}</div>
+        </div>
+      </div>
     </div>
   );
 }

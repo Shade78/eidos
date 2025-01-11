@@ -3,13 +3,14 @@
   cursor: pointer;
   padding: 10px;
   transition: background-color 0.3s;
-  color: #ecf0f1;
+  color: #000000;
   overflow: hidden;
   white-space: nowrap;
+  border-radius: 15px;
 }
 
 .menu-item:hover {
-  background-color: #34495e;
+  background-color: #2f91f4;
 }
 
 .menu-item.collapsed {

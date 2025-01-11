@@ -8,7 +8,7 @@ const data = {
   schedule: [
     {
       id: 1,
-      dateAndTime: "2023-12-27 10:00",
+      dateAndTime: "2023-12-27 11:00",
       status: "Запланировано",
       module:
         "Ультразвуковое исследование органов брюшной полости и забрюшинного пространства",
@@ -28,7 +28,7 @@ const data = {
     },
     {
       id: 3,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 13:00",
       status: "Запланировано",
       module: "а",
       sessionType: "Аккредитация",
@@ -37,7 +37,7 @@ const data = {
     },
     {
       id: 4,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 14:00",
       status: "Идет",
       module: "б",
       sessionType: "Аккредитация",
@@ -46,7 +46,7 @@ const data = {
     },
     {
       id: 5,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 15:00",
       status: "Завершено",
       module: "в",
       sessionType: "Аккредитация",
@@ -55,7 +55,7 @@ const data = {
     },
     {
       id: 6,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 12:20",
 
       module: "г",
       sessionType: "Аккредитация",
@@ -64,7 +64,7 @@ const data = {
     },
     {
       id: 7,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 15:00",
 
       module: "д",
       sessionType: "Аккредитация",
@@ -73,7 +73,7 @@ const data = {
     },
     {
       id: 8,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 16:00",
 
       module: "е",
       sessionType: "Аккредитация",
@@ -82,7 +82,7 @@ const data = {
     },
     {
       id: 9,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 17:00",
 
       module: "ё",
       sessionType: "Аккредитация",
@@ -91,7 +91,7 @@ const data = {
     },
     {
       id: 10,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 18:00",
 
       module: "ж",
       sessionType: "Аккредитация",
@@ -100,7 +100,7 @@ const data = {
     },
     {
       id: 11,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 20:00",
 
       module: "з",
       sessionType: "Аккредитация",
@@ -109,7 +109,7 @@ const data = {
     },
     {
       id: 12,
-      dateAndTime: "2023-12-27 12:00",
+      dateAndTime: "2023-12-27 11:00",
 
       module: "к",
       sessionType: "Аккредитация",
@@ -189,13 +189,19 @@ export default function TableContent({ activeMenu }) {
 
   return (
     <div className="table-content">
-      <input
-        type="text"
-        placeholder="Поиск"
-        value={searchTerm}
-        onChange={handleSearch}
-        className="search-input"
-      />
+      <div className="main-header">
+        <h2>Учебные сессии</h2>
+        <div className="main-header_rightside">
+          <input
+            type="text"
+            placeholder="Поиск"
+            value={searchTerm}
+            onChange={handleSearch}
+            className="search-input"
+          />
+          <button className="create-btn">Создать</button>
+        </div>
+      </div>
       <table className="data-table">
         <thead>
           <tr>
